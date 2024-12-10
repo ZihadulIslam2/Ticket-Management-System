@@ -19,5 +19,4 @@ import { logout } from "../controllers/authLogOutController";
 
 router.post("/logout", logout);
 
-
 export default router
