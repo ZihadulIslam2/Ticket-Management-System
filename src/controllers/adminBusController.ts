@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import Bus from '../models/Bus.model'
+import Bus from '../models/Bus'
 import { handleError } from '../utils/errorHandler'
 
 export const addBus = async (req: Request, res: Response): Promise<void> => {
@@ -9,7 +9,7 @@ export const addBus = async (req: Request, res: Response): Promise<void> => {
     // Validate request
     if (!name || !route) {
       res.status(400).json({ message: 'Name and route are required.' })
-      return 
+      return
     }
 
     // Create and save the new bus

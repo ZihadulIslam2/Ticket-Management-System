@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import mongoose from 'mongoose'
-import Bus from '../models/Bus.model'
-import Ticket from '../models/Ticket.model'
+import Bus from '../models/Bus'
+import Ticket from '../models/Ticket'
 
 // View all buses
 export const viewBuses = async (req: Request, res: Response) => {
@@ -37,7 +37,7 @@ export const purchaseTicket = async (
   res: Response
 ): Promise<void> => {
   try {
-    const { ticketId } = req.body 
+    const { ticketId } = req.body
 
     // Ensure the ticket ID is provided
     if (!ticketId) {

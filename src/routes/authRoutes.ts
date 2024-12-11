@@ -1,9 +1,9 @@
 import express from 'express'
 import { register } from '../controllers/authController'
-import { registerValidator } from '../middleware/validators'
+import { registerValidator } from '../validation/validators'
 
 import { login } from '../controllers/authLoginController'
-import { loginValidator } from '../middleware/loginValidator'
+import { loginValidator } from '../validation/loginValidator'
 
 import { logout } from '../controllers/authLogOutController'
 

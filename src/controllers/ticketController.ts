@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import Ticket from '../models/Ticket.model'
+import Ticket from '../models/Ticket'
 import { handleError } from '../utils/errorHandler'
 
 // Create a Ticket

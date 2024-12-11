@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import bcrypt from 'bcryptjs'
 import { validationResult } from 'express-validator'
-import User from '../models/User.model'
+import User from '../models/User'
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   // Validate inputs
