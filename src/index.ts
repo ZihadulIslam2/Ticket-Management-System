@@ -3,6 +3,7 @@ import connectDB from './config/db'
 import authRoutes from './routes/authRoutes'
 import adminRoutes from './routes/adminRoutes'
 import ticketRoutes from './routes/ticketRoutes'
+import userRoutes from './routes/userRoutes'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -15,5 +16,6 @@ connectDB()
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 app.use('/', ticketRoutes)
+app.use('/api', userRoutes)
 
 app.listen(5000, () => console.log('Server running on port 5000'))

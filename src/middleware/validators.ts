@@ -1,4 +1,3 @@
-// src/middleware/validators.ts
 import { body } from 'express-validator'
 
 export const registerValidator = [

@@ -22,7 +22,7 @@ const verifyAdmin = (req: Request, res: Response, next: NextFunction): void => {
       return
     }
 
-    req.user = decoded // Type-safe way to attach token data
+    req.user = decoded
     next()
   } catch (error) {
     res.status(401).json({ message: 'Invalid or expired token.' })
