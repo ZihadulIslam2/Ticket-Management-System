@@ -1,11 +1,5 @@
-import mongoose, { Schema, Document } from 'mongoose'
-
-interface IBus extends Document {
-  name: string
-  route: string
-  description: string
-  tickets: mongoose.Types.ObjectId[]
-}
+import mongoose, { Schema } from 'mongoose'
+import  {IBus}  from '../interfaces/bus'
 
 const BusSchema = new Schema<IBus>({
   name: { type: String, required: true },

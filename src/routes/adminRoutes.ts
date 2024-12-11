@@ -1,5 +1,5 @@
 import express from 'express'
-import { addBus, updateBus, deleteBus } from '../controllers/adminBusController'
+import { addBus, updateBus, deleteBus } from '../controllers/busController'
 import verifyAdmin from '../middleware/verifyAdmin'
 const router = express.Router()
 
