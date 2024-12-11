@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
-// Load environment variables
 dotenv.config()
 
 const secret = process.env.JWT_SECRET
@@ -35,9 +34,9 @@ const authenticateUser = (
   }
 
   try {
-    const decoded = jwt.verify(token, secret) as DecodedToken // Verify and type the token
-    req.user = decoded // Attach the decoded token to `req.user`
-    next()
+    // Verify and type the token
+    const decoded = jwt.verify(token, secret) as DecodedToken
+    req.user = decoded
   } catch (error: any) {
     res.status(401).json({
       message:

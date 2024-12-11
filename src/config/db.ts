@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb+srv://zihadul708:01882343242@nodetuts.xnfrv.mongodb.net/ticket-management-system?retryWrites=true&w=majority&appName=nodetuts')
+    await mongoose.connect(process.env.MONGO_URI as string)
     console.log('Database connected successfully')
   } catch (error) {
     console.error('Database connection failed', error)

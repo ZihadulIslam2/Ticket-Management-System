@@ -37,7 +37,7 @@ export const purchaseTicket = async (
   res: Response
 ): Promise<void> => {
   try {
-    const { ticketId } = req.body // Expect ticketId to be passed in the request body
+    const { ticketId } = req.body 
 
     // Ensure the ticket ID is provided
     if (!ticketId) {

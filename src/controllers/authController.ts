@@ -1,4 +1,3 @@
-// src/controllers/authController.ts
 import { Request, Response } from 'express'
 import bcrypt from 'bcryptjs'
 import { validationResult } from 'express-validator'
@@ -41,7 +40,6 @@ export const register = async (req: Request, res: Response): Promise<void> => {
   } catch (error) {
     console.error(error)
 
-    // Ensure error is of type `Error` to access `message` property
     if (error instanceof Error) {
       res.status(500).json({ message: 'Server error.', error: error.message })
     } else {

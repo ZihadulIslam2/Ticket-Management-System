@@ -24,7 +24,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       role: user.role,
     }
 
-    const jwtSecret = process.env.JWT_SECRET as string // Explicit type assertion ensures it's a string
+    const jwtSecret = process.env.JWT_SECRET as string
     const token = jwt.sign(payload, jwtSecret, {
       expiresIn: '1h',
     })

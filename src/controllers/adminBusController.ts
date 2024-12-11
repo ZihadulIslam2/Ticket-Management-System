@@ -9,7 +9,7 @@ export const addBus = async (req: Request, res: Response): Promise<void> => {
     // Validate request
     if (!name || !route) {
       res.status(400).json({ message: 'Name and route are required.' })
-      return // Ensure the function exits here
+      return 
     }
 
     // Create and save the new bus
